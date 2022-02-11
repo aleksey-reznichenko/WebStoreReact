@@ -1,0 +1,86 @@
+.Footer {
+  &__Contact {
+    transition: opacity 0.3s linear,visibility 0.3s linear,color 0.15s linear,border-color 0.15s linear,background-color 0.15s linear,box-shadow 0.15s linear;
+    &:hover {
+      color: #969696;
+    }
+    svg {
+      width: 13px;
+      height: 13px;
+      margin-right: 15px;
+    }
+    @media (max-width: 899px) {
+      & {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+      }
+    }
+  }
+  &__Logo {
+    margin-right: -13px;
+    text-align: center;
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 27px;
+    letter-spacing: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.54);
+    user-select: none;
+    text-transform: uppercase;
+    @media (max-width: 1100px) {
+      & {
+        font-size: 24px;
+        margin-right: -10px;
+        letter-spacing: 10px;
+      }
+    }
+    @media (max-width: 425px) {
+      & {
+        font-size: 22px;
+        margin-right: -7px;
+        letter-spacing: 7px;
+      }
+    }
+  }
+  &__Social {
+    &:last-child {
+      margin: 0 !important;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: 0.3s;
+      &:hover {
+        fill: #5b5353;
+      }
+    }
+  }
+  &__Bottom-link {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: opacity 0.3s linear,visibility 0.3s linear,color 0.15s linear,border-color 0.15s linear,background-color 0.15s linear,box-shadow 0.15s linear;
+    &:hover {
+      color: #969696;
+    }
+    &:last-child{
+      margin: 0;
+      &::after {
+        background-color: #000;
+      }
+    }
+    &::after {
+      content: "";
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      top: 7px;
+      right: -15px;
+    }
+  }
+}

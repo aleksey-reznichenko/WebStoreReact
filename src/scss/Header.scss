@@ -1,0 +1,125 @@
+.Header {
+  &__Logo {
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 27px;
+    letter-spacing: 13px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.54);
+    user-select: none;
+    text-transform: uppercase;
+    @media (max-width: 1100px) {
+      &{
+        font-size: 24px;
+        letter-spacing: 10px;
+      }
+    }
+    @media (max-width: 425px) {
+      &{
+        font-size: 22px;
+        letter-spacing: 7px;
+      }
+    }
+  }
+  &__Icons {
+    margin-right: 30px;
+    @media (max-width: 1100px) {
+      &{
+        margin-right: 20px;
+      }
+    }
+    button {
+      @media (max-width: 1100px) {
+        &{
+          padding: 5px;
+        }
+      }
+      &:hover{
+        transform: scale(1.2);
+        background-color: transparent;
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__Links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__Link {
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    @media (max-width: 1100px) {
+      &{
+        margin: 0 5px;
+        letter-spacing: 1px;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s linear, visibility 0.3s linear, color 0.15s linear, border-color 0.15s linear, background-color 0.15s linear, box-shadow 0.15s linear;
+    }
+    &:hover:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__Burger {
+    background-color: rgba(0, 0, 0, 0.2);
+    .MuiPaper-root {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      a {
+        color: #fff;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        max-height: 40px;
+        width: 100%;
+        button {
+          text-align: center;
+        }
+        &:last-child{
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+#menu-appbar {
+  .MuiPaper-root {
+    background-color: rgba(0, 0, 0, 0.8);
+    li {
+      display: flex;
+      justify-content: center;
+      max-height: 40px;
+      width: 100%;
+      button {
+        text-align: center;
+      }
+      &:last-child{
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
